@@ -1,0 +1,244 @@
+//
+// forms.scss
+// Extended from Bootstrap
+//
+
+// Input
+// =====
+
+.input {
+
+  // Group
+
+  &-group {
+
+    // Text
+
+    &-text {
+      transition: border-color .15s;
+
+      // Light
+
+      @at-root .form-light #{&} {
+        background-color: fade-out(white, .95);
+        border-color: fade-out(white, .75);
+        color: fade-out(white, .5);
+      }
+    }
+
+    // Icon
+
+    &-icon {
+      height: 1em; width: 1em;
+
+      > path {
+        stroke-width: 10 !important;
+      }
+    }
+
+    // Append
+
+    &-append {
+
+      &.order-0 {
+
+        > .input-group-text {
+          border-top-left-radius: $input-border-radius;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: $input-border-radius;
+          border-right: 0;
+        }
+      }
+    }
+  }
+}
+
+
+// Control
+// =======
+
+.form {
+
+  // Control
+
+  &-control {
+
+    // Light
+
+    @at-root .form-light #{&} {
+      background-color: fade-out(white, .95);
+      border-color: fade-out(white, .75);
+      color: white;
+
+      &::placeholder {
+        color: fade-out(white, .5);
+      }
+    }
+
+    &.order-1 {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: $input-border-radius !important;
+      border-bottom-right-radius: $input-border-radius !important;
+      border-left: 0;
+    }
+
+    // Blur
+
+    &:not(:focus) {
+
+      + .input-group-append {
+
+        // Icon
+
+        .input-group-icon {
+
+          path {
+            stroke-dashoffset: 0;
+          }
+        }
+      }
+    }
+    
+    // Focus
+
+    &:focus {
+      background-color: white;
+
+      @at-root .form-light #{&} {
+        background-color: transparent;
+        border-color: $primary;
+      }
+
+      + .input-group-append {
+        
+        // Text
+
+        .input-group-text {
+          background-color: white;
+          border-color: $input-focus-border-color;
+          color: $primary;
+
+          @at-root .form-light #{&} {
+            background-color: transparent;
+          }
+        }
+
+        // Icon
+
+        .input-group-icon {
+
+          > path {
+            animation: icon .5s linear forwards;
+
+            @keyframes icon {
+              to {
+                stroke-dashoffset: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  // Styled
+
+  &-styled {
+    padding: 2.5rem 1.5rem;
+    border: 1px solid $border-color;
+    border-top: 2px solid $primary;
+    box-shadow: $box-shadow;
+
+    @include media-breakpoint-up(md) {
+      padding: 3.5rem 2.5rem;
+    }
+  }
+}
+
+
+// Label
+// =====
+
+label {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  color: $text-muted;
+
+  // Light
+
+  @at-root .form-light #{&} {
+    color: fade-out(white, .5);
+  }
+}
+
+
+// Extended
+// ========
+
+.extended {
+
+  // Radio
+
+  &-radio {
+
+    // Label
+
+    &-label {
+      display: block;
+      padding: 1rem 1.5rem;
+      border: 1px solid $input-border-color;
+      text-align: center;
+      font-size: $h4-font-size;
+      color: $text-muted;
+      cursor: pointer;
+      transition: $transition-base;
+      transition-property: border-color, color;
+
+      // Hover
+
+      &:hover, &:focus, &:active, &:active:focus {
+        text-decoration: none;
+        border-color: $input-focus-border-color;
+        color: $text-muted;
+      }
+    }
+
+    // Input
+
+    &-input {
+      display: none;
+
+      &:checked {
+
+        + .extended-radio-label {
+          border-color: $input-focus-border-color;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+
+// Mailchimp
+
+#mce-hidden-input {
+  display: none;
+}
+
+
+// Custom control
+//
+// Custom checkboxes and radio inputs
+
+.custom-control-label {
+
+  &:before, &:after {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

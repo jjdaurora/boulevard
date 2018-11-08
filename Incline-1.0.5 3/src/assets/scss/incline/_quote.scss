@@ -1,0 +1,77 @@
+//
+// quote.scss
+// Incline component
+//
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  font-size: $quote-font-size;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+
+  // Icon
+  // ====
+
+  &:before {
+    content: open-quote;
+    font-family: $headings-font-family;
+    min-width: 1em;
+    font-size: 5rem;
+    line-height: $headings-line-height;
+  }
+  &:after {
+    content: close-quote;
+    transform: scale(0);
+  }
+
+  
+  // Blockquote
+  // ==========
+
+  &-blockquote {
+    margin-bottom: 0;
+
+    // Content
+
+    &-content {
+      font-size: inherit;
+    }
+
+    // Footer
+
+    &-footer {
+      display: flex;
+      align-items: center;
+      font-size: $quote-footer-font-size;
+
+      > img {
+        width: $quote-footer-img-size; 
+        height: auto;
+        margin-right: 1em;
+        border-radius: ($quote-footer-img-size / 2);
+
+        @supports( object-fit: cover ) {
+          height: $quote-footer-img-size;
+          object-fit: cover;
+          object-position: center center;
+        }
+      }
+    }
+  }
+
+
+  // Sizes
+  // =====
+
+  &-sm {
+    font-size: $quote-font-size-sm;
+
+    .quote-blockquote-footer {
+      font-size: $quote-footer-font-size-sm;
+    }
+  }
+}

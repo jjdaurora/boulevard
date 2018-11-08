@@ -1,0 +1,23 @@
+//
+// social.scss
+// Incline component
+//
+
+.social {
+  
+  // Links
+  // =====
+
+  &-links {
+    list-style: none;
+    padding-left: 0;
+
+    > li {
+      display: inline-block;
+
+      + li {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}

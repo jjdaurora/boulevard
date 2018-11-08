@@ -1,0 +1,21 @@
+//
+// theme-brown.scss
+// Main stylesheet file
+//
+
+// Primary color
+$primary: #d2aa78;
+
+// Bootstrap setup
+@import "../../../node_modules/bootstrap/scss/functions";
+
+// Incline setup
+@import "incline/functions";
+@import "incline/variables";
+@import "incline/user-variables";
+
+// Bootstrap core
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// Incline core
+@import "incline/incline";

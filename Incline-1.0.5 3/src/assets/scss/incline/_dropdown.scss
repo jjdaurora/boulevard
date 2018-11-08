@@ -1,0 +1,51 @@
+//
+// dropdowns.scss
+// Extended from Bootstrap
+//
+
+.dropdown {
+
+  // Menu
+
+  &-menu {
+
+    @if ( $enable-animation ) {
+      opacity: 0;
+
+      // Show
+
+      &.show {
+        animation: $transition-duration-base forwards fade-in;
+
+        @keyframes fade-in {
+          to {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  
+  // Item
+
+  &-item {
+    padding-top: $dropdown-item-padding-y-sm;
+    padding-bottom: $dropdown-item-padding-y-sm;
+    font-size: $dropdown-link-font-size;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    transition: $dropdown-item-transition;
+
+    @include media-breakpoint-up(xl) {
+      padding-top: $dropdown-item-padding-y;
+      padding-bottom: $dropdown-item-padding-y;
+    }
+
+    + .dropdown-item {
+
+      @include media-breakpoint-up(xl) {
+        border-top: 1px solid $dropdown-border-color;
+      }
+    }
+  }
+}

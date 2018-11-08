@@ -1,0 +1,105 @@
+//
+// nav.scss
+// Extended from Bootstrap
+//
+
+.nav {
+
+  // Tabs
+  // ====
+
+  &-tabs {
+
+    .nav {
+
+      // Item
+
+      &-item {
+
+        + .nav-item {
+          margin-left: .5rem;
+        }
+      }
+
+      // Link
+
+      &-link {
+        padding: $input-btn-padding-y $input-btn-padding-x;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+
+        // Hover
+
+        &:hover, &:focus, &:active, &:focus:active {
+          border-bottom-color: white;
+        }
+
+        // Active
+
+        &.active {
+        }
+
+        // Disabled
+
+        &.disabled {
+          pointer-events: none;
+          opacity: .5;
+        }
+      }
+    }
+  }
+
+
+  // Pills
+  // =====
+
+  &-pills {
+
+    .nav {
+
+      // Item
+
+      &-item {
+
+        + .nav-item {
+          margin-left: .5rem;
+        }
+      }
+
+      // Link
+
+      &-link {
+        padding: $input-btn-padding-y $input-btn-padding-x;
+        border: 1px solid $primary;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        color: $body-color;
+        transition: $transition-base;
+
+        // Hover
+
+        &:hover {
+          color: $primary;
+        }
+
+        // Active
+
+        &.active {
+
+          &:hover {
+            color: white;
+          }
+        }
+
+        // Disabled
+
+        &.disabled {
+          pointer-events: none;
+          opacity: .5;
+        }
+      }
+    }
+  }
+}

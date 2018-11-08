@@ -1,0 +1,77 @@
+//
+// buttons.scss
+// Extended from Bootstrap
+//
+
+.btn {
+  position: relative;
+  font-size: $btn-font-size;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+
+  // Outline
+
+  &[class*="outline"] {
+    color: $body-color;
+
+    // Dropdown toggle
+
+    &.dropdown-toggle {
+      background-color: transparent;
+    }
+
+    // Hover
+    
+    &:hover, &:focus, &:active, &:active:focus {
+      background-color: transparent;
+    }
+
+    // Contextual classes
+
+    &[class*="primary"] {
+
+      &:hover, &:focus, &:active, &:active:focus {
+        color: $primary;
+      }
+    }
+  }
+
+  // Circle
+
+  &-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: $btn-font-size * $line-height-base + $btn-padding-x * 2 !important;
+    height: $btn-font-size * $line-height-base + $btn-padding-x * 2 !important;
+    padding: 0 !important;
+    border-radius: 50%;
+
+    // Large
+
+    &.btn-lg {
+      width: $btn-font-size * $line-height-base + $btn-padding-x-lg * 2 !important;
+      height: $btn-font-size * $line-height-base + $btn-padding-x-lg * 2 !important;
+    }
+    
+    // Small
+
+    &.btn-sm {
+      width: $btn-font-size * $line-height-base + $btn-padding-x-sm * 2 !important;
+      height: $btn-font-size * $line-height-base + $btn-padding-x-sm * 2 !important;
+    }
+  }
+
+  // Link
+
+  &.btn-link {
+    color: $body-color;
+  }
+
+  // Focus
+  
+  &:focus {
+    box-shadow: $btn-focus-box-shadow !important;
+  }
+
+}

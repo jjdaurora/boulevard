@@ -1,0 +1,202 @@
+//
+// navbar.scss
+// Extended from Bootstrap
+//
+
+.navbar {
+
+  // Background
+  // ==========
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: white;
+    border-bottom: 1px solid $border-color;
+    opacity: 0;
+    transition: $transition-fade;
+    z-index: -1;
+  }
+
+
+  // Dark
+  // ====
+
+  &-dark {
+    color: $navbar-dark-color;
+
+    // Underline
+
+    > .container {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -$navbar-padding-y; left: 0; right: 0;
+        border-top: 1px solid $border-color-light;
+      }
+    }
+  }
+
+
+  // Light
+  // =====
+
+  &-light {
+    color: $navbar-light-color;
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+
+  // Brand
+  // =====
+
+  &-brand {
+    font-weight: $font-weight-bold;
+    color: inherit !important;
+
+    // SVG
+
+    &-svg {
+      height: $navbar-brand-img-size;
+      width: auto;
+
+      // We need to define the width explicitely instead of 
+      // using the 'auto' value because of the IE rendering issues
+      width: ($navbar-brand-img-size * 235 / 80);
+    }
+
+    // Image
+
+    &-img {
+      height: $navbar-brand-img-size;
+      width: auto;
+    }
+  }
+
+
+  // Nav
+  // ===
+
+  .nav {
+
+    // Link
+
+    &-link {
+      position: relative;
+      padding-top: $navbar-nav-link-padding-y;
+      padding-bottom: $navbar-nav-link-padding-y;
+      font-size: $navbar-nav-link-font-size;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      transition: $transition-base;
+      transition-property: color;
+      
+      @include media-breakpoint-up(xl) {
+
+        &:before {
+          display: none;
+          content: '';
+          position: absolute;
+          bottom: -$navbar-padding-y;
+          left: $navbar-nav-link-padding-x;
+          right: $navbar-nav-link-padding-x;
+          border-top: 2px solid $primary;
+        }  
+      }
+
+      // Active
+      
+      &.active {
+        
+        @include media-breakpoint-up(xl) {
+
+          &:before {
+            display: block;
+          }
+        }
+      }
+    }
+
+    // Item
+
+    &-item {
+
+      // Active
+
+      &.active {
+
+        > .nav-link {
+
+          @include media-breakpoint-up(xl) {
+
+            &:before {
+              display: block;
+            }
+          }
+        }
+      }
+
+      // Divider
+
+      &-divider {
+        display: none;
+
+        @include media-breakpoint-up(xl) {
+          display: block;
+        }
+        
+        .nav-link {
+          opacity: .25;
+          
+          > span {
+            border-left: 1px solid;
+          }
+        }
+      }
+    }
+  }
+
+
+  // Dropdown
+  // ========
+
+  .dropdown {
+    
+    &-menu {
+
+      @include media-breakpoint-down(lg) {
+        padding-top: 0;
+        padding-bottom: 0;
+        border: 0;
+      }
+
+      @include media-breakpoint-up(xl) {
+
+        @if ( $enable-animation ) {
+          transform: translateY(.5rem);
+          opacity: 0;
+
+          // Show
+
+          &.show {
+            animation: $transition-duration-base forwards fade-up;
+
+            @keyframes fade-up {
+              to {
+                transform: translateY(0);
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

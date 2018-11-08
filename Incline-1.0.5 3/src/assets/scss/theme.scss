@@ -1,0 +1,21 @@
+//
+// theme.scss
+// Main stylesheet file
+//
+
+// Primary color
+$primary: #f5ba4b;
+
+// Bootstrap setup
+@import "../../../node_modules/bootstrap/scss/functions";
+
+// Incline setup
+@import "incline/functions";
+@import "incline/variables";
+@import "incline/user-variables";
+
+// Bootstrap core
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// Incline core
+@import "incline/incline";

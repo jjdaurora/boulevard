@@ -1,0 +1,34 @@
+//
+// breadcrumbs.scss
+// Extended from Bootstrap
+//
+
+.breadcrumb {
+  margin-top: $navbar-height;
+
+
+  // Heading
+  // =======
+
+  &-heading {
+    margin-bottom: 0;
+    font-family: $font-family-base;
+    font-weight: 300;
+    color: $breadcrumb-heading-color;
+  }
+
+
+  // Item
+  // ====
+
+  &-item {
+    font-size: $breadcrumb-font-size;
+
+    &:before {
+      font: {
+        family: 'Font Awesome 5 Free';
+        weight: 900;
+      }
+    }
+  }
+}

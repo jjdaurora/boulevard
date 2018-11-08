@@ -1,0 +1,500 @@
+//
+// variables.scss
+// Extended from Bootstrap
+//
+
+// Options
+// =======
+
+$enable-rounded: false;
+$enable-animation: true;
+
+
+// Z-index
+// =======
+
+$zindex-preloader: 1080;
+
+
+// Colors
+// ======
+
+// Grays
+
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: tint(#6c757d, 15%);
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Brand
+
+// Primary colors are set in theme.scss (theme-orange.scss) to
+// generate multiple color schemes at them same time
+
+$primary-dark: darken($primary, 20%);
+$primary-light: tint($primary, 20%);
+
+
+// Fonts
+// =====
+
+$font-family-sans-serif: 'Objective', sans-serif;
+
+$font-size-base: 0.9375rem; // 15px
+
+$font-size-lg: 1.0625rem;   // 17px
+$font-size-sm: 0.8125rem;   // 13px
+$font-size-xs: 0.6875rem;   // 11px
+
+$font-weight-bold: 500;
+
+$headings-font-family: 'Objective', sans-serif;
+$headings-line-height: 1.35;
+$headings-font-weight: $font-weight-bold;
+$headings-color: $gray-900;
+$headings-letter-spacing: -.05em;
+
+$h1-font-size: 2.125rem;  // 34px
+$h2-font-size: 1.625rem;  // 26px
+$h3-font-size: 1.375rem;  // 22px
+$h4-font-size: 1.125rem;  // 18px
+$h5-font-size: 0.9375rem; // 15px
+$h6-font-size: 0.75rem;   // 12px
+
+$h1-font-size-sm: 1.5rem;     // 24px
+$h2-font-size-sm: 1.375rem;   // 22px
+$h3-font-size-sm: 1.25rem;    // 20px
+$h4-font-size-sm: 1.125rem;   // 18px
+$h5-font-size-sm: 0.9375rem;  // 15px
+$h6-font-size-sm: 0.75rem;    // 12px
+
+$line-height-base: 1.75;
+
+$lead-font-size: $font-size-lg;
+$lead-line-height: $line-height-base;
+
+$blockquote-font-size: $font-size-lg;
+$blockquote-img-size: 3em;
+
+$text-zigzag-size: .175em;
+$text-zigzag-border-color: $primary;
+
+$text-muted: $gray-600;
+
+$text-white-muted: fade-out(white, .35);
+
+$small-font-size: 86.666%;
+
+$selection-bg: $primary;
+$selection-color: white;
+
+
+// Body
+// ====
+
+$body-color: $gray-900;
+
+
+// Paragraphs
+// ==========
+
+$paragraph-margin-bottom: 1.5rem;
+
+
+// Components
+// ==========
+
+$border-color: fade-out(black, .9);
+$border-color-light: fade-out(white, .9);
+
+$border-radius: 0;
+
+$box-shadow: 0 25px 100px -5px fade-out(black, .85);
+$box-shadow-dark: 0 25px 100px -5px fade-out(black, .5);
+
+$transition-duration-base: .2s;
+$transition-duration-xl: $transition-duration-base * 3;
+$transition-duration-lg: $transition-duration-base * 2;
+$transition-duration-sm: $transition-duration-base * .5;
+
+
+// Spacing
+// =======
+
+$spacer: 1rem;
+
+$spacers: (
+  -1: ($spacer * -.25),
+  -2: ($spacer * -.5),
+  -3: ($spacer),
+  -4: ($spacer * -1.5),
+  -5: ($spacer * -3),
+  -6: ($spacer * -4.5),
+  -7: ($spacer * -6),
+  -8: ($spacer * -7.5),
+  -9: ($spacer * -9),
+  -10: ($spacer * -9.5),
+  6: ($spacer * 4.5),
+  7: ($spacer * 6),
+  8: ($spacer * 7.5),
+  9: ($spacer * 9),
+  10: ($spacer * 9.5),
+);
+
+
+// Grid containers
+// ===============
+
+$container-max-widths: (
+  xl: 1200px
+);
+
+
+// Grid columns
+// ============
+
+$grid-gutter-width: 3rem;
+
+
+// Buttons + Forms
+// ===============
+
+$input-btn-padding-y: 1rem;
+$input-btn-padding-x: 1.5rem;
+
+$input-btn-padding-y-sm: .75rem;
+$input-btn-padding-x-sm: 1.25rem;
+
+$input-btn-padding-y-lg: 1.25rem;
+$input-btn-padding-x-lg: 1.75rem;
+
+$input-btn-focus-box-shadow: none;
+
+
+// Buttons
+// =======
+
+$btn-font-size: $font-size-xs;
+$btn-box-shadow: none;
+
+
+// Forms
+// =====
+
+$input-padding-y: $input-btn-padding-y;
+$input-padding-x: .75rem;
+
+$input-line-height: $btn-font-size * $line-height-base;
+
+$input-bg: $gray-100;
+
+$input-border-color: $gray-300;
+
+$input-focus-border-color: $primary;
+
+$input-group-addon-color: $gray-600;
+$input-group-addon-bg: $gray-100;
+
+$custom-select-padding-y: $input-padding-y;
+$custom-select-padding-x: $input-padding-x;
+$custom-select-line-height: $input-line-height;
+
+$custom-select-focus-box-shadow: $input-btn-focus-box-shadow;
+
+
+// Navs
+// ====
+
+$nav-link-padding-y: .5rem;
+
+
+// Navbar
+// ======
+
+$navbar-padding-y: 1.25rem;
+
+$navbar-nav-link-padding-y: 1rem;
+$navbar-nav-link-padding-x: 1rem;
+$navbar-nav-link-font-size: $h6-font-size;
+
+$navbar-dark-color: white;
+$navbar-dark-hover-color: $primary;
+$navbar-dark-active-color: $navbar-dark-hover-color;
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+$navbar-dark-toggler-border-color: transparent;
+
+$navbar-light-color: $gray-900;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $navbar-light-hover-color;
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+$navbar-light-toggler-border-color: transparent;
+
+$navbar-brand-img-size: 1.75rem;
+
+$navbar-height: $navbar-padding-y * 2 + $navbar-nav-link-font-size * $line-height-base + $navbar-nav-link-padding-y * 2;
+
+
+// Card
+// ====
+
+$card-spacer-y: 1rem;
+$card-spacer-x: 2.5rem 2rem;
+
+$card-spacer-y-lg: 1.5rem;
+$card-spacer-x-lg: 3.5rem 2.5rem;
+
+$card-spacer-y-sm: 1rem;
+$card-spacer-x-sm: 2.5rem 1.5rem;
+
+$card-border-color: $border-color;
+$card-bg: transparent;
+
+$card-img-overlay-padding: $card-spacer-x;
+
+$card-hover-img-translate: translateY(-.25rem);
+$card-hover-img-box-shadow: 0 1rem 2rem -1rem fade-out(black, .25);
+
+$card-disabled-opacity: .5;
+
+
+// Sections
+// ========
+
+$section-padding-y-sm: 5rem;
+$section-padding-y: 7.5rem;
+
+
+// Dropdowns
+// =========
+
+$dropdown-min-width: 12.5rem;
+$dropdown-padding-y: 0;
+
+$dropdown-border-color: fade-out(black, .9);
+$dropdown-box-shadow: none;
+
+$dropdown-link-font-size: $font-size-xs;
+$dropdown-link-hover-bg: $gray-100;
+$dropdown-link-hover-color: $body-color;
+
+$dropdown-link-active-color: $navbar-light-active-color;
+$dropdown-link-active-bg: transparent;
+
+$dropdown-item-padding-y: .75rem;
+$dropdown-item-padding-y-sm: .5rem;
+$dropdown-item-transition: background-color $transition-duration-sm;
+
+
+// Modals
+// ======
+
+$modal-backdrop-opacity: .9;
+
+$modal-header-border-width: 0;
+$modal-header-padding: 1rem;
+$modal-footer-border-width: 0;
+
+
+// Breadcrumbs
+// ===========
+
+$breadcrumb-padding-x: 0;
+$breadcrumb-padding-y: 1.5rem;
+
+$breadcrumb-margin-bottom: 0;
+
+$breadcrumb-bg: $gray-800;
+$breadcrumb-divider-color: fade-out(white, .5);
+$breadcrumb-active-color: fade-out(white, .5);
+$breadcrumb-divider: "\f105";
+$breadcrumb-heading-color: white;
+$breadcrumb-font-size: $font-size-base * .85;
+
+
+// Navs
+// ====
+
+$nav-tabs-border-color: $border-color;
+$nav-tabs-link-hover-border-color: $nav-tabs-border-color;
+
+$nav-pills-border-radius: .25rem;
+$nav-pills-link-active-color: white;
+$nav-pills-link-active-bg: $primary;
+
+
+// Slider
+// ======
+
+$slider-item-gutter-width: $grid-gutter-width / 4;
+
+$slider-nav-size: 2.5rem;
+$slider-nav-bg: white;
+$slider-nav-color: $body-color;
+$slider-nav-font-size: $h4-font-size;
+$slider-nav-hover-bg: $primary;
+
+
+// Utilities
+// =========
+
+$bg-overlay-bg: $gray-900;
+$bg-overlay-opacity: .55;
+
+$bg-triangle-dark-bg: $gray-900;
+$bg-triangle-dark-opacity: .01;
+
+$bg-triangle-light-bg: white;
+$bg-triangle-light-opacity: .01;
+
+$bg-incline-dark-bg: $gray-900;
+$bg-incline-dark-opacity: .015;
+
+$bg-incline-light-bg: white;
+$bg-incline-light-opacity: .05;
+
+$bg-incline-size: 500vmax;
+
+
+// Quote
+// =====
+
+$quote-font-size: $h4-font-size;
+$quote-font-size-sm: $font-size-base;
+
+$quote-footer-img-size: 3.5em;
+$quote-footer-font-size: $font-size-base;
+$quote-footer-font-size-sm: $font-size-sm;
+
+
+// Stats
+// =====
+
+$stats-item-val-font-family: $headings-font-family;
+$stats-item-val-font-size: $h2-font-size;
+
+$stats-item-title-font-size: $font-size-xs;
+
+
+// Testimonials
+// ============
+
+$testimonials-item-opacity: .25;
+
+$testimonials-item-inner-padding-sm: 1.5rem;
+$testimonials-item-inner-padding: 2.5rem 2rem;
+
+
+// Header
+// ======
+
+// % of its width
+
+$header-img-height: 25%;
+$header-img-height-sm: 100%;
+
+
+// Brands
+// ======
+
+$brand-item-padding: .5rem 1.5rem;
+$brand-item-font-size: $h1-font-size;
+$brand-item-color: $text-muted;
+$brand-item-border-color: $border-color;
+$brand-item-hover-border-color: $primary;
+$brand-item-image-filter: grayscale(0);
+
+
+// Map
+// ===
+
+// % of its width
+
+$map-height: 25%;
+$map-height-sm: 100%;
+
+
+// Alerts
+// ======
+
+$alert-padding-y: 1.5rem;
+$alert-padding-x: 1.5rem;
+
+$alert-box-shadow: $box-shadow;
+
+$alert-border-level: 0;
+
+$alert-fixed-max-width: 40rem;
+
+
+// Icons
+// =====
+
+$icon-person-path-length: 328;
+$icon-businessman-path-length: 490;
+$icon-envelope-path-length: 477;
+$icon-lock-path-length: 441;
+$icon-diamond-path-length: 688;
+$icon-layers-path-length: 514;
+$icon-edit-path-length: 659;
+$icon-comment-path-length: 406;
+$icon-at-path-length: 463;
+$icon-support-path-length: 539;
+$icon-truck-path-length: 582;
+$icon-case-path-length: 510;
+$icon-clock-path-length: 381;
+$icon-cart-path-length: 486;
+$icon-marker-path-length: 335;
+$icon-tick-path-length: 384;
+$icon-building-path-length: 700;
+$icon-camera-path-length: 474;
+
+
+// Sidenav
+// =======
+
+$sidenav-offset: 2rem;
+
+
+// FAQ
+// ===
+
+$faq-item-padding: 1rem 0;
+
+
+// Pagination
+// ==========
+
+$pagination-padding-y: $input-btn-padding-y;
+$pagination-padding-x: $input-btn-padding-x;
+
+$pagination-padding-y-lg: $input-btn-padding-y-lg;
+$pagination-padding-x-lg: $input-btn-padding-x-lg;
+
+$pagination-padding-y-sm: $input-btn-padding-y-sm;
+$pagination-padding-x-sm: $input-btn-padding-x-sm;
+
+$pagination-border-color: $border-color;
+
+$pagination-hover-bg: $gray-100;
+
+
+// Animation
+// =========
+
+$animation-delay: .15s;
+$animation-duration: $transition-duration-lg;
+$animation-timing-function: ease-in-out;
+
+
+// Preloader
+// =========
+
+$preloader-bg: white;
+
+$preloader-spinner-width: 3.5rem;
+$preloader-spinner-height: 3.5rem;

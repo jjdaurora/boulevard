@@ -1,0 +1,55 @@
+//
+// footer.scss
+// Incline component
+//
+
+.footer {
+
+  // Brand
+  // =====
+
+  &-brand {
+
+    // SVG
+
+    &-svg {
+      height: $navbar-brand-height;
+      width: auto;
+
+      // We need to define the width explicitely instead of 
+      // using the 'auto' value because of the IE rendering issues
+      width: ($navbar-brand-height * 235 / 80);
+    }
+
+    // Image
+
+    &-img {
+      height: $navbar-brand-height;
+      width: auto;
+    }
+  }
+
+
+  // Links
+  // =====
+
+  &-links {
+    list-style-type: none;
+    padding-left: 0;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
+
+    > li {
+
+      + li {
+        margin: .5rem 0 0 0;
+
+        @include media-breakpoint-up(md) {
+          margin: 0 0 0 1.5rem;
+        }
+      }
+    }
+  }
+}
